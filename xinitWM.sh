@@ -10,7 +10,7 @@
 usage() {
     echo -e "
 Usage: $0 
-[-s <dual|external|notebook>]
+[-s <dual|external|notebook|multiseat>]
 [-w <stumpwm|cwm|2bwm>
 [-k <caps2ctrl|dvorak>]
 " 1>&2; exit 1; }
@@ -22,7 +22,7 @@ do
         in
         s) 
             dsp=${OPTARG}
-            [[ ${dsp} == "dual" || ${dsp} == "external" || ${dsp} == "notebook" ]] || usage
+            [[ ${dsp} == "dual" || ${dsp} == "external" || ${dsp} == "notebook" || ${dsp} == "multiseat" ]] || usage
             ;;
         w) 
             wm=${OPTARG} 
@@ -60,3 +60,15 @@ fi
 ## set up wallpaper in right resolution
 #feh --bg-scale ~/Bilder/wallpaper/fall-wisconsin.jpg &
 
+# xinitrc_blub
+xsetroot -cursor_name plus -fg white -bg black &
+feh --bg-scale ~/Bilder/wallpaper/wisconsin.jpg &
+xset b off &
+xrdb -load /home/marten/.Xresources &
+xmodmap ~/scripts/keys/xmodmap_swap-caps-ctrl &
+${wm} &
+xcompmgr -l 0.5 -t 0.5 -o 0.5 -r 2 -c &
+exec urxvt
+
+# startx
+xinit .xinitrc_cwm -- :2 -nolisten tcp vt$XDG_VTNR
