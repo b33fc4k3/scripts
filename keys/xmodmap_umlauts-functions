@@ -1,0 +1,39 @@
+! activate umlauts by using win2-key (menu-key) + a or o or u or s
+! as seen here: http://ailin.tucana.uberspace.de/mrtweek/2006/10/deutsche_umlaute_auf_tastatur_mit_us-layout/
+! keycode 117 = Mode_switch
+
+! my altGr is 108 [ but without altGr i couldnt do any ~ ] so only in dvorak where there aint no use for altGr
+! problem it overrides setxkbmap settings as qwertz o => dvorak o
+keycode 108 = Mode_switch
+
+! QWERTZ
+! keycode  38 = a A adiaeresis Adiaeresis
+! keycode  30 = u U udiaeresis Udiaeresis
+! keycode  32 = o O odiaeresis Odiaeresis
+! keycode  39 = s S ssharp
+
+! DVORAK
+! swapping !??
+keycode  41 = i I
+keycode  42 = u U udiaeresis Udiaeresis 
+! umlauts
+keycode  38 = a A adiaeresis Adiaeresis
+! needs to be fixed whenever I swap u and i
+!keycode  41 = u U udiaeresis Udiaeresis 
+keycode  39 = o O odiaeresis Odiaeresis
+keycode  47 = s S ssharp
+
+! functions
+keycode  58 = m M Return NoSymbol
+keycode  45 = t T BackSpace BackSpace
+
+! cursor arrows on qwertz p l ö ä | or even better on l , . - bzw n w v z
+!keycode 33 = l L Up
+!keycode 46 = n N Left
+!keycode 47 = s S Down
+!keycode 48 = minus underscore Right
+keycode 46 = n N Up
+keycode 59 = w W Left
+keycode 60 = v V Down
+keycode 61 = z Z Right
+

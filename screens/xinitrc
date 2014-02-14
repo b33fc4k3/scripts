@@ -1,0 +1,13 @@
+#!/bin/bash
+
+feh --bg-scale ~/Bilder/wallpaper/wisconsin.jpg &
+xset b off
+
+xmodmap ~/keys/xmodmap_swap-caps-ctrl &
+xrdb -load ~/.Xresources &
+
+xcompmgr -l 0.5 -t 0.5 -o 0.5 -r 2 -c &
+
+#exec $1
+#[[ -z $1 ]] && wm cwm
+#wm $1

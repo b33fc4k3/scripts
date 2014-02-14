@@ -1,0 +1,23 @@
+#!/bin/sh
+setxkbmap dvorak
+
+# really should swap u and i (and aswell f and q? x and ?)
+# furthermore:
+# capewell-dvorak
+# http://geekhack.org/index.php?topic=23493.0
+# http://forum.colemak.com/viewtopic.php?id=492
+# http://www.andong.co.uk/dvorak/
+# https://github.com/milomouse/dotfiles/blob/master/keymaps/capewell-dvorak.xmodmap
+
+# probably instead of caps = rubout, caps = alt!??
+#xmodmap ~/keys/xmodmap_symbolics
+#xmodmap ~/keys/xmodmap_rubout
+
+xmodmap ~/keys/xmodmap_swap-caps-ctrl
+
+# problem with xmonad's workspace switching :(
+#xmodmap ~/keys/xmodmap_swap-numbers-symbols
+xmodmap ~/keys/xmodmap_umlauts-functions
+
+# make caps_lock => rubout repeatable
+xset r 66

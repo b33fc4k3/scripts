@@ -1,0 +1,15 @@
+vi /etc/X11/Xwrapper.config                                                                                                                                       
+allowed_users=anybody (jeder)                                                                                                                                  
+or                                                                                                                                                             
+dpkg-reconfigure x11-common                                                                                                                                  
+
+then add                                                                                                                                                       
+.xinitc_cwm .xinitrc_2bwm .xinitrc_2bwm                                                                                                                        
+
+and start them on different displays                                                                                                                           
+xinit .xinitrc_cwm -- :2 -nolisten tcp vt$XDG_VTNR
+
+
+https://wiki.archlinux.org/index.php/xinitrc
+there are also wms with --replace features !?
+https://bbs.archlinux.org/viewtopic.php?pid=1035726

@@ -1,0 +1,15 @@
+#! /bin/sh
+
+# Set nice background.
+xsetroot -bg
+# Set nice pointer cursor.
+xsetroot -cursor_name plus -fg white -bg black
+
+# Load resources.
+xrdb -load /home/marten/.Xresources
+
+# Start window manager in the background. If it dies, X still lives.
+2bwm &
+
+# Start a terminal in the foreground. If this dies, X dies.
+exec urxvt
