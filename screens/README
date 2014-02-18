@@ -13,3 +13,8 @@ xinit .xinitrc_cwm -- :2 -nolisten tcp vt$XDG_VTNR
 https://wiki.archlinux.org/index.php/xinitrc
 there are also wms with --replace features !?
 https://bbs.archlinux.org/viewtopic.php?pid=1035726
+
+put correct path to xinits in /usr/share/xsessions
+
+
+https://github.com/w0ng/dotfiles/blob/master/.xinitrc very good example of bash scripting

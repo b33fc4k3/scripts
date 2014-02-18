@@ -1,0 +1,99 @@
+! =============== X.org default configurations =================
+! file:     ~/.Xresources
+! author:  Willy Goiffon
+! vim: set fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ==============================================================
+
+! as seen here: 
+! https://gitorious.org/z3bra/dotfiles/source/6e3955a7f4097f0143b8c3295201e951f3d7cb86:Xresources
+! http://blog.z3bra.org/2013/10/home-sweet-home.html
+
+! Terminal colors ----------------------------------------------
+! DARK BACKGROUND
+*background:#1d1d16
+*foreground:#ffffa2
+*color0:    #303030
+*color8:    #5F5F5F
+*color1:    #c03000
+*color9:    #ff4400
+*color2:    #5f7f03
+*color10:   #aaff00
+*color3:    #ce8510
+*color11:   #ffff00
+*color4:    #327074
+*color12:   #44aadd
+*color5:    #73446f
+*color13:   #ff44bb
+*color6:    #32a084
+*color14:   #4bffbe
+*color7:    #baba77
+*color15:   #ffffa2
+
+! LIGHT BACKGROUND
+!*background:#e8e9ca
+!*foreground:#443c28
+!*color0:    #101010
+!*color8:    #443c28
+!*color1:    #3f0f04
+!*color9:    #c03000
+!*color2:    #323e14
+!*color10:   #5f7f03
+!*color3:    #4f3103
+!*color11:   #ce8510
+!*color4:    #00212a
+!*color12:   #327074
+!*color5:    #281130
+!*color13:   #73446f
+!*color6:    #003f3f
+!*color14:   #125b58
+!*color7:    #a28c64
+!*color15:   #e8e9ca
+
+! URxvt (rxvt-unicode) -----------------------------------------
+
+URxvt*termName:           rxvt-256color
+URxvt*loginShell:         false
+URxvt*saveLines:          1024
+URxvt*geometry:           96x28
+URxvt*depth:              32
+URxvt*font:               -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
+URxvt*boldFont:           -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
+URxvt*scrollBar:          false
+URxvt*cursorBlink:        false
+URxvt*cursorColor:        #443c28
+URxvt*cursorColor2:       #e8e9ca
+URxvt*underlineColor:     #999999
+URxvt*internalBorder:     4
+! URxvt*perl-ext-common:    default,url-select,keyboard-select
+URxvt.url-select.launcher:   /usr/bin/dwb
+URxvt.url-select.underline: true
+! URxvt.keysym.M-u:         perl:url-select:select_next
+! URxvt.keysym.M-s:         perl:keyboard-select:activate
+
+! Colored man pages
+URxvt.colorIT:            #cacaca
+URxvt.colorBD:            #ae8510
+URxvt.colorUL:            #a28c64
+
+! XTerm ---------------------------------------------------------
+
+xterm*scrollBar:         false
+xterm*faceName:          gohu
+xterm*faceSize:          8
+xterm*geometry:          64x2
+xterm*boldMode:          false
+xterm*cutNewline:        false
+xterm*on4Clicks:         group
+xterm*on5Clicks:         page
+xterm*internalBorder:    8
+xterm*metaSendsEscape:   true
+xterm*colorBD:           #ffffff
+xterm*colorBDMode:       true
+xterm*cursorBlink:       false
+xterm*cursorColor:       #e8e9ca
+xterm*veryBoldColors:    14
+xterm*loginShell:        true
+xterm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*saveLines:         512

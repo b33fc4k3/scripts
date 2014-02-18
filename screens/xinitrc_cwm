@@ -1,15 +1,40 @@
 #! /bin/sh
 
 # Set nice background.
-xsetroot -bg black
+#xsetroot -bg
+feh --bg-scale /home/marten/Bilder/wallpaper/wisconsin.jpg &
 # Set nice pointer cursor.
-xsetroot -cursor_name plus -fg white -bg black
+xsetroot -cursor_name plus -fg white -bg black &
+
+xset b off &
+xset -b &
+xset -dpms &
+xset s noblank &
+xset s off &
+
+# Get font (sudo?) before loading xresources
+xset +fp /usr/share/fonts/tamsyn-font-1.10 &
+xset fp rehash &
+
+# Keys
+#xmodmap /home/marten/scripts/keys/
+#setxkbmap
+#./home/marten/scripts/keys/aoei
+setxkbmap -layout de &
+xmodmap /home/marten/scripts/keys/xmodmap_swap-caps-ctrl &
 
 # Load resources.
-xrdb -load /home/marten/.Xresources
+xrdb -load /home/marten/scripts/screens/Xresources_mine &
+
+
+# start urxvtd, xbindkeys and what not, applet , notifier
+
+xcompmgr -l 0.5 -t 0.5 -o 0.5 -r 2 -c &
 
 # Start window manager in the background. If it dies, X still lives.
-cwm &
+# scheiße das geht nicht
+#./home/marten/src/cwm/cwm &
+exec /home/marten/src/cwm/cwm
 
 # Start a terminal in the foreground. If this dies, X dies.
-exec urxvt
+#exec terminator

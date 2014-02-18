@@ -15,6 +15,9 @@
 # http://forums.debian.net/viewtopic.php?f=6&t=75097 themes
 # http://urukrama.wordpress.com/openbox-guide/#xcompmgr
 
+# gdm desktop files in /usr/share/xsessions point to .xinitrc_2bwm for example in which
+# i do the relevant xresources xrdb xmodmap stuff
+
 usage() {
     echo -e "
 Usage: $0 
@@ -55,6 +58,8 @@ echo "dsp = ${dsp}"
 echo "wm = ${wm}"
 echo "kbd = ${kbd}"
 
+# also look at xnest http://box.matto.nl/xnest.html
+# http://www.linuxjournal.com/article/7298
 dual="xrandr --output HDMI-0 --auto --right-of LVDS &"
 external="xrandr --output HDMI-0 --auto --output LVDS --off &"
 
