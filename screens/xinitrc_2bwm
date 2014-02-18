@@ -23,7 +23,7 @@ xset fp rehash &
 
 setxkbmap -layout de
 xmodmap ${HOME}/scripts/keys/xmodmap_swap-caps-ctrl
-#source /home/marten/scripts/keys/aoei &
+#source /home/marten/scripts/keys/aoei
 
 # Load resources.
 xrdb -load ${HOME}/scripts/screens/Xresources_z3bra

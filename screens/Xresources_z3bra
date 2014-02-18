@@ -55,7 +55,9 @@ URxvt*termName:           rxvt-256color
 URxvt*loginShell:         false
 URxvt*saveLines:          1024
 URxvt*geometry:           96x28
-URxvt*depth:              32
+! 2bwm seems to have problems coloring borders if depth is set above 31
+! set smaller or omit line if border colors do not paint correctly
+!URxvt*depth:              32
 URxvt*font:               -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
 URxvt*boldFont:           -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
 URxvt*scrollBar:          false
