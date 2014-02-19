@@ -1,0 +1,19 @@
+#!/bin/sh 
+
+9menu -geometry 150x66+300+16 -bg "#000000" -fg "#F2EDD7" -font "-*-lucidatypewriter-*-*-*-*-10-*-*-*-*-*-*-*" -popup -label 'Internet' \ 
+"Chromium":"chromium &" \
+"Emacs":"emacs &" \
+"URxvt":"urxvt &" \
+#"links2":"xlinks2 &" \ 
+#"Dillo Browser":"dillo \"$@\" &" \ 
+#"Safer Browser":"SafeBrowse &" \ 
+#"FireFox":"/lib/firefox/firefox \"$@\" &" \ 
+----------:inet.sh \ 
+#"gFTP":"gftp &" \ 
+#"PMirrorget":"pmwget &" \ 
+#"VOIP + IM":"psip &" \ 
+#"Podcast-Grab":"/usr/local/bin/ppg-gui.sh &" \ 
+#"downloader":"pwsget &" \ 
+#"Transmission":"transmission &" \ 
+----------:inet.sh \ 
+Close:exit

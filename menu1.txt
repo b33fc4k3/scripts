@@ -1,0 +1,9 @@
+============== 
+| Terminal   |: urxvt 
+| Browser    |: defaultbrowser 
+| Links      |: urxvt -e links 
+| Editor     |: geany 
+| MOCP       |: urxvt -e mocp 
+| Streams    |: urxvt -e tradio 
+| Media      |: urxvt -e tmedia    
+============== 

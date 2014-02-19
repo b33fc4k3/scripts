@@ -1,0 +1,5 @@
+#!/bin/sh 
+9menu -label "Main Menu" -warp -popdown -geometry "0+0"  -bg "#5A5A5A" -fg "#D4D4D4" -font "-misc-fixed-medium-r-normal-*-14-*-*-*-*-*-*-*"  -file "$@" 
+
+# AS SEEN HERE: http://murga-linux.com/puppy/viewtopic.php?t=78519&sid=683f2102cac28a353dc8db20e2c913eb
+# ALSO: http://www.necopost.com/2011/11/awesome-lightweight-menu-for-your-linux.html
