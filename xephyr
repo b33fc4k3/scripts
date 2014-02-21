@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# http://blog.pesa.se/2009/07/18/experimenting-with-window-managers/
+# http://ubuntuforums.org/archive/index.php/t-620003.html
+
+# USAGE:
+# ./xephyr &
+# DISPLAY=":1.0" cwm (oder wmii ...)
+# Control-Shift (to let xephyr grab all keystrokes)
+
+DPY=":1.0"
+RES="1024x768"
+
+PATH=$PATH:/home/marten
+export PATH
+
+Xephyr $DPY -ac -screen $RES "$@"
+
